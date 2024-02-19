@@ -28,7 +28,7 @@ class Solution(object):
 
 def main():
     s = Solution()
-    roman = input("Enter Roman numerals (I, V, X, L, C, D,and M): ")
+    roman = input("Enter Roman numerals (I, V, X, L, C, D, or M): ")
     print(f"Result: {s.romanToInt(roman)}")
 
 
