@@ -30,7 +30,7 @@ def main():
     result = s.longestCommonPrefix(strs)
 
     # output
-    print("\nThw longest common prefix:", result)
+    print("\nThe longest common prefix:", result)
 
 
 if __name__ == "__main__":
