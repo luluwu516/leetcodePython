@@ -21,7 +21,6 @@ def main():
     nums = input("Enter values for a list separated by spaces: ").split()
     nums = [int(val) for val in nums]
     val = int(input("Enter the element to remove: "))
-    expected_nums = []
 
     # processing
     k = s.removeElement(nums, val)
