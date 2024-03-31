@@ -12,55 +12,14 @@ class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
         if not len(nums):
             return None
-
-        def helper(l, r):
-            if l > r:
-                return None
-            mid = (l + r) // 2
+        elif len(nums) == 1:
+            return TreeNode(nums[0])
+        else:
+            mid = len(nums) // 2
             root = TreeNode(nums[mid])
-            root.left = helper(l, mid - 1)
-            root.right = helper(mid + 1, r)
+            root.left = self.sortedArrayToBST(nums[0:mid])
+            root.right = self.sortedArrayToBST(nums[mid + 1 : len(nums)])
             return root
-
-        return helper(0, len(nums) - 1)
-
-    #     return self.helper(nums, 0, len(nums) - 1)
-
-    # def helper(self, nums: List[int], l: int, r: int) -> Optional[TreeNode]:
-    #     if l > r:
-    #         return None
-    #     mid = (l + r) // 2
-    #     node = TreeNode(nums[mid])
-    #     node.left = self.helper(nums, l, mid - 1)
-    #     node.right = self.helper(nums, mid + 1, r)
-
-    #     return node
-
-
-# def printTree(root: TreeNode):
-#     if not root:
-#         print("Tree is empty")
-#         return
-
-#     def height(node: TreeNode) -> int:
-#         if not node:
-#             return 0
-#         return 1 + max(height(node.left), height(node.right))
-
-#     def printLevel(node: TreeNode, level: int):
-#         if not node:
-#             return
-#         if level == 1:
-#             print(node.val, end=" ")
-#         elif level > 1:
-#             printLevel(node.left, level - 1)
-#             printLevel(node.right, level - 1)
-
-#     h = height(root)
-#     for i in range(1, h + 1):
-#         print("Level ", i, ":", sep="", end=" ")
-#         printLevel(root, i)
-#         print()
 
 
 def printTree(root: TreeNode):
