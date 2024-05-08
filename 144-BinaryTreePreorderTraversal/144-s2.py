@@ -16,10 +16,10 @@ class Solution:
         curr = root
         while curr != None or stack:
             while curr != None:
+                res.append(curr.val)
                 stack.append(curr)
                 curr = curr.left
             curr = stack.pop()
-            res.append(curr.val)
             curr = curr.right
 
         return res
