@@ -55,10 +55,7 @@ def main():
     s = Solution()
 
     # input
-    print(
-        "Enter the values to construct the binary trees (separated by spaces, enter -1 for null nodes)"
-    )
-    nums = input("The first binary tree : ").split()
+    nums = input("Enter numbers (separated by spaces) to construct the tree: ").split()
     nums = [int(n) for n in nums]
 
     root1 = constructBinaryTree(nums)
