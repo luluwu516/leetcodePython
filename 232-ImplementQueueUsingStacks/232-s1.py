@@ -27,7 +27,7 @@ def main():
     # processing
     myQueue.push(1)
     myQueue.push(2)
-    param_2 = myQueue.top()
+    param_2 = myQueue.peek()
     param_3 = myQueue.pop()
     param_4 = myQueue.empty()
 
