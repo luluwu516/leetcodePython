@@ -1,6 +1,5 @@
 class Solution:
     def addDigits(self, num: int) -> int:
-        total = num
         while num > 9:
             total = 0
             total += num % 10
@@ -10,7 +9,7 @@ class Solution:
                 num //= 10
             num = total
 
-        return total
+        return num
 
 
 def main():
