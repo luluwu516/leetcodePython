@@ -28,7 +28,7 @@ def main():
 
     # output
     print("\nResult:")
-    print("The integer is%s a ugly number", ("" if res else " not"))
+    print(f"The integer is{'' if res else ' not'} an ugly number")
 
 
 if __name__ == "__main__":
