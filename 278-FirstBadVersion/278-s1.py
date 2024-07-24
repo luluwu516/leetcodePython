@@ -1,6 +1,5 @@
 class Solution:
-    def __init__(self, n: int, bad: int):
-        self.n = n
+    def __init__(self, bad: int):
         self.bad_version = bad
 
     def firstBadVersion(self, n: int) -> int:
@@ -21,16 +20,16 @@ class Solution:
 
 def main():
     # declaration and input
-    num = int(input("Enter n: "))
     bad = int(input("Enter the bad version: "))
-    s = Solution(num, bad)
+    s = Solution(bad)
+    num = int(input("Enter n: "))
 
     # processing
     res = s.firstBadVersion(num)
 
     # output
     print("\nResult:")
-    print(f"Then {res} is the first bad version")
+    print(f"Version {res} is the first bad version")
 
 
 if __name__ == "__main__":
