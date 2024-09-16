@@ -1,6 +1,3 @@
-import math
-
-
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
         low = 0

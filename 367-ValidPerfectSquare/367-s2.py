@@ -1,6 +1,3 @@
-import math
-
-
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
         for i in range((num // 2) + 2):
